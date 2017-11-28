@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Angel Rivera.
 """
 
 ########################################################################
 #
-# TODO: 1. PUT YOUR NAME IN THE ABOVE LINE and...
+# DONE: 1. PUT YOUR NAME IN THE ABOVE LINE and...
 #
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
@@ -34,6 +34,8 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle5()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
@@ -105,7 +107,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -137,7 +139,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -164,10 +166,16 @@ def turtle3():
 #   Get help as needed to fix any such errors.
 #
 ########################################################################
-
+def turtle4():
+    magic = rg.SimpleTurtle('circle')
+    magic.pen = rg.Pen('DarkSeaGreen', 7)
+    magic.speed = 5
+    magic.forward(250)
+    magic.right(90)
+    magic.forward(250)
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -183,7 +191,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
@@ -218,6 +226,21 @@ def turtle3():
 #   repository (saving to the cloud is a better way to permanently safe work).
 #
 ########################################################################
+def turtle5():
+    crab = rg.SimpleTurtle("turtle")
+    rabbit = rg.SimpleTurtle('circle')
+
+    crab.pen = rg.Pen("gold", 10)
+    rabbit.pen = rg.Pen('HotPink', 15)
+
+    crab.backward(300)
+    crab.left(45)
+    crab.forward(300)
+
+    rabbit.right(45)
+    rabbit.forward(300)
+    rabbit.left(90)
+    rabbit.backward(300)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
