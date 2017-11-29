@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -86,7 +87,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -105,11 +106,17 @@ def circle_and_rectangle():
     print(just_a_circle.fill_color)
     print(just_a_circle.center)
     print(center_point.x)
+    print(center_point.y)
 
     point1 = rg.Point(300, 150)
     point2 = rg.Point(400, 50)
     rectangle = rg.Rectangle(point1, point2)
     rectangle.attach_to(window)
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print(rectangle.get_center())
+    print((point1.x + point2.x) / 2)
+    print((point1.y + point2.y) / 2)
 
     window.render()
     window.close_on_mouse_click()
@@ -137,9 +144,33 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
+    window = rg.RoseWindow(600, 500, "Lines")
 
+    point1 = rg.Point(100, 200)
+    point2 = rg.Point(200, 300)
+    zoint1 = rg.Point(400, 200)
+    zoint2 = rg.Point(300, 200)
+
+    lines = rg.Line(point1, point2)
+    zines = rg.Line(zoint1, zoint2)
+
+    zines.thickness = 10
+
+    print(lines.get_midpoint())
+    print((point1.x + point2.x) / 2)
+    print((point1.y + point2.y) / 2)
+
+    print(zines.get_midpoint())
+    print((zoint1.x + zoint2.x) / 2)
+    print((zoint1.y + zoint2.y) / 2)
+
+    lines.attach_to(window)
+    zines.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
